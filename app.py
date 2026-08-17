@@ -75,33 +75,49 @@ def apply_custom_css(mode):
         section[data-testid="stSidebar"] {{
             background: linear-gradient(160deg, #2d0a2f 0%, #380b3a 55%, #4a1a6b 100%) !important;
             border-right: 1px solid rgba(255,255,255,0.10) !important; }}
-        section[data-testid="stSidebar"] * {{ color: #FFFFFF !important; }}
+        section[data-testid="stSidebar"] h1,
+        section[data-testid="stSidebar"] h2,
+        section[data-testid="stSidebar"] h3,
+        section[data-testid="stSidebar"] label,
+        section[data-testid="stSidebar"] label p,
+        section[data-testid="stSidebar"] label span,
+        section[data-testid="stSidebar"] [data-testid="stWidgetLabel"] p,
+        section[data-testid="stSidebar"] p,
+        section[data-testid="stSidebar"] span {{ color: #FFFFFF !important; }}
         section[data-testid="stSidebar"] .stRadio label,
         section[data-testid="stSidebar"] .stSelectbox label {{ font-size: 0.75rem !important; }}
         section[data-testid="stSidebar"] .stRadio div[role="radiogroup"] {{ gap: 0.5rem !important; }}
         section[data-testid="stSidebar"] .stRadio div[role="radiogroup"] label {{
             background-color: rgba(255,255,255,0.05) !important; padding: 0.3rem 0.8rem !important;
-            border-radius: 8px !important; border: 1px solid rgba(255,255,255,0.10) !important; }}
+            border-radius: 8px !important; border: 1px solid rgba(255,255,255,0.10) !important; color: #FFFFFF !important; }}
         section[data-testid="stSidebar"] .stRadio div[role="radiogroup"] label[data-selected="true"] {{
-            background-color: #7D4BAE !important; border-color: rgba(255,255,255,0.32) !important; }}
+            background-color: #7D4BAE !important; border-color: rgba(255,255,255,0.32) !important; color: #FFFFFF !important; }}
 
         section[data-testid="stSidebar"] div[data-baseweb="select"],
         section[data-testid="stSidebar"] div[data-baseweb="select"] > div {{
             background-color: #FFFFFF !important; border-radius: 8px !important;
             border: 1px solid rgba(0,0,0,0.18) !important; min-height: 2.2rem !important; }}
-        section[data-testid="stSidebar"] div[data-baseweb="select"] * {{
-            color: #1C0A2E !important; -webkit-text-fill-color: #1C0A2E !important; fill: #1C0A2E !important; }}
-        section[data-testid="stSidebar"] div[data-baseweb="select"] input {{
-            color: #1C0A2E !important; -webkit-text-fill-color: #1C0A2E !important; }}
+        section[data-testid="stSidebar"] div[data-baseweb="select"] *,
+        section[data-testid="stSidebar"] div[data-baseweb="select"] div,
+        section[data-testid="stSidebar"] div[data-baseweb="select"] span,
+        section[data-testid="stSidebar"] div[data-baseweb="select"] p,
+        section[data-testid="stSidebar"] div[data-baseweb="select"] input,
+        section[data-testid="stSidebar"] div[data-baseweb="select"] svg,
+        section[data-testid="stSidebar"] div[data-baseweb="select"] path,
+        section[data-testid="stSidebar"] div[data-testid="stSelectbox"] div[data-baseweb="select"] * {{
+            color: #1C0A2E !important; -webkit-text-fill-color: #1C0A2E !important; fill: #1C0A2E !important; opacity: 1 !important; }}
         [data-testid="stSelectboxVirtualDropdown"],
         [data-testid="stSelectboxVirtualDropdown"] *,
+        div[data-baseweb="popover"],
+        div[data-baseweb="popover"] *,
         div[data-baseweb="popover"] ul[role="listbox"],
         ul[role="listbox"], ul[role="listbox"] li, [role="option"] {{
-            background-color: #FFFFFF !important; }}
-        ul[role="listbox"] li, [role="option"], [role="option"] * {{
+            background-color: #FFFFFF !important; color: #1C0A2E !important; -webkit-text-fill-color: #1C0A2E !important; }}
+        ul[role="listbox"] li *, [role="option"] * {{
             color: #1C0A2E !important; -webkit-text-fill-color: #1C0A2E !important; }}
-        [role="option"]:hover, [role="option"][aria-selected="true"] {{
-            background-color: #EDE1F7 !important; color: #1C0A2E !important; }}
+        [role="option"]:hover, [role="option"][aria-selected="true"],
+        [role="option"]:hover *, [role="option"][aria-selected="true"] * {{
+            background-color: #EDE1F7 !important; color: #1C0A2E !important; -webkit-text-fill-color: #1C0A2E !important; }}
 
         div[data-testid="stMetric"] {{
             background: {card_grad} !important; padding: 0.7rem 0.9rem !important;
